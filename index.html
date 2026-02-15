@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- Font-Awesome -->
-    <script src="https://kit.fontawesome.com/3113a0d890.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +24,49 @@
         .font-sn {
             font-family: "SN Pro", sans-serif;
         }
+        ul li:hover{
+            color: oklch(51.1% 0.262 276.966);
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
-    
+    <header class="shadow-sm">
+        <div class="navbar bg-base-100 max-w-screen-lg mx-auto">
+            <div class="navbar-start">
+                
+                <a class="font-bold text-xl text-indigo-600 cursor-pointer">SwiftCard</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="flex gap-10 px-1 text-base">
+                    <li><a>Home</a></li>
+                    <li><a>Products</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class=""><i class="fa fa-cart-shopping text-2xl"></i></a>
+                <div class="dropdown lg:hidden">
+                    <div tabindex="0" role="button" class="btn btn-ghost ml-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="1"
+                        class="dropdown-content bg-base-100 rounded-box z-1 mt-3 w-32 p-2 shadow flex flex-col gap-3 items-end right-0 px-4">
+                        <li><a>Home</a></li>
+                        <li><a>Products</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
 </body>
 
 </html>
